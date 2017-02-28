@@ -1,0 +1,228 @@
+<header class="bar bar-nav" style="padding:0; background:#488AC4; color:#fff; border: none;">
+    <a class="icon pull-left" style="color:white; padding-left:10px;"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+    <h1 class="title" style="color:#fff;">
+        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+        Letrinhas v3
+    </h1>
+</header>
+
+<div class="loader2" >
+    <div class="placeholder light">
+        <div class="spinner"></div>
+    </div>
+</div>
+
+<div class="content">
+
+    <div class="panel panel-default" style="margin:20px 35px; text-align:center;">
+        <div class="panel-body">
+            {{title}}
+        </div>
+    </div>
+
+    <div id="testArea" class="panel-body" style="margin: 0 35px; border:1px solid #1a1a1a; background:white; text-align:center; font-size:23px; line-height:35px">
+
+        {{{content.text}}}
+
+    </div>
+
+    <!--Audio Records-->
+    <div class="panel panel-info" style="float:left; width:47%; margin:20px 0 20px 35px;">
+        <div class="panel-heading">Ouvir:</div>
+        <div class="panel-body">
+
+            <!--Student Audio-->
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Aluno: </span>
+                <audio id="audioPlayerStudent" style="width:98%; z-index:9999" autobuffer="autobuffer" controls></audio>
+            </div>
+
+            <br>
+
+            <!--Teacher Audio-->
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon2">Professor: </span>
+                <audio id="audioPlayerTeacher" style="width:98%; z-index:9999" autobuffer="autobuffer" controls></audio>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Final Result-->
+    <div class="panel panel-success" style="float:right; width:47%; margin:20px 35px 20px 0;">
+        <div class="panel-heading">Resultados:</div>
+        <div class="panel-body">
+
+            <div class="row">
+                <div class="col-xs-4">
+                    <label for="DropExprSinais" class="textareaParaTestes" style="color:#000000;">Sinais:</label>
+                    <select id="DropExprSinais" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="col-xs-4">
+                    <label for="DropExprEntoacao" class="textareaParaTestes" style="color:#000000;">Entoação:</label>
+                    <select id="DropExprEntoacao" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="col-xs-4">
+                    <label for="DropExprTexto" class="textareaParaTestes" style="color:#000000;">Texto:</label>
+                    <select id="DropExprTexto" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+
+            <!--Wrong Words Counter-->
+            <p><b>Palavras Erradas:</b> <span id="wrongWords" class="badge">0</span></p>
+
+            <!--Submit Button-->
+            <button id="btnConfirm" class="btn btn-positive btn-block">Finalizar</button>
+
+        </div>
+    </div>
+
+</div>
+
+<!--POPOVER INFO-->
+<div id="divPopOverOp" style="display:none; font-size:20px;">
+
+    <div class="dropdown">
+
+        <button class="btn btn-info popovermenubtn" type="button" data-toggle="dropdown" style="width:100%;"> Exatidão
+            <span class="caret"></span>
+        </button>
+
+        <ul class="dropdown-menu popovermenu" role="menu">
+
+            <li class="accuracy" role="presentation">
+                <a class="btOpt" name="11" role="menuitem">
+                    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                    Substituição deletras
+                </a>
+            </li>
+
+            <li class="accuracy" role="presentation">
+                <a class="btOpt" name="12" role="menuitem">
+                    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                    Substituição de palavras
+                </a>
+            </li>
+
+            <li class="accuracy" role="presentation">
+                <a class="btOpt" name="13" role="menuitem">
+                    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                    Adições
+                </a>
+            </li>
+
+            <li class="accuracy" role="presentation">
+                <a class="btOpt" name="14" role="menuitem">
+                    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                    Omissões de letras
+                </a>
+            </li>
+
+            <li class="accuracy" role="presentation">
+                <a class="btOpt" name="15" role="menuitem">
+                    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                    Omissões de sílabas
+                </a>
+            </li>
+
+            <li class="accuracy" role="presentation">
+                <a class="btOpt" name="16" role="menuitem">
+                    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                    Omissões de palavras
+                </a>
+            </li>
+
+            <li class="accuracy" role="presentation">
+                <a class="btOpt" name="17" role="menuitem">
+                    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                    Inversões
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="dropdown">
+        <button class="btn btn-info popovermenubtn" type="button" data-toggle="dropdown" style="width: 100%;"> Fluidez
+            <span class="caret"></span>
+        </button>
+
+        <ul class="dropdown-menu popovermenu" role="menu">
+
+            <li class="fluidity" role="presentation">
+                <a class="btOpt" name="21" role="menuitem" tabindex="-1">
+                    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                    Vacilação
+                </a>
+            </li>
+
+            <li class="fluidity" role="presentation">
+                <a class="btOpt" name="22" role="menuitem" tabindex="-1">
+                    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                    Repetições
+                </a>
+            </li>
+
+            <li class="fluidity" role="presentation">
+                <a class="btOpt" name="23" role="menuitem" tabindex="-1">
+                    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                    Soletração
+                </a>
+            </li>
+
+            <li class="fluidity" role="presentation">
+                <a class="btOpt" name="24" role="menuitem" tabindex="-1">
+                    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                    Fragmentação de palavras
+                </a>
+            </li>
+
+            <li class="fluidity" role="presentation">
+                <a class="btOpt" name="25" role="menuitem" tabindex="-1">
+                    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                    Retificação espontânea
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+</div>
+
+
+<!--CONFIRMATION WINDOW-->
+<div id="confirmationModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Confirmação</h4>
+            </div>
+            <div class="modal-body">
+                <p>Tem a certeza que pretende finalizar esta correcção?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Voltar</button>
+                <button id="btnSubmit" type="button" class="btn btn-primary">Finalizar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

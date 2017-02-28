@@ -1,0 +1,189 @@
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+
+        <nav class="navbar navbar-default" style="margin-bottom:0;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <p class="navbar-text" style="color:white;">
+                        <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
+                        <span data-i18n="sidebar.header"></span>
+                    </p>
+                </div>
+            </div>
+        </nav>
+
+        {{#account}}
+        <ul class="sidebar-nav">
+
+            <li class="sidebar-brand">
+
+                <div class="pull-left image">
+                    <img src="{{b64}}" class="img-circle" alt="User Image">
+                </div>
+
+                <div class="pull-left info">
+                    <p data-i18n="sidebar.welcome"></p>
+                    <a>{{name}}</a>
+                </div>
+
+            </li>
+
+            <li class="header" data-i18n="sidebar.mainmenu"></li>
+
+            <li>
+                <a href="#home">
+                    <i class="fa fa-tachometer" aria-hidden="true"></i>
+                    <span data-i18n="sidebar.dashboard"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#statistics">
+                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                    <span data-i18n="sidebar.statistics"></span>
+                </a>
+            </li>
+
+            <li class="header" data-i18n="sidebar.appmenu"></li>
+
+            <li class="sync">
+                <a href="#">
+                    <i class="fa fa-refresh" aria-hidden="true"></i>
+                    <span data-i18n="sidebar.sync"></span>
+                </a>
+            </li>
+
+            <li class="header" data-i18n="sidebar.accountmenu"></li>
+
+            <li class="active">
+                <a href="#profile">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <span data-i18n="sidebar.profile"></span>
+                </a>
+            </li>
+          
+            <li>
+                <a href="#logout">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    <span data-i18n="sidebar.logout"></span>
+                </a>
+            </li>
+
+        </ul>
+        {{/account}}
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <!--CONTENT NAVBAR-->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </a>
+                    <p class="navbar-text" style="color:white;">Letrinhas</p>
+                </div>
+            </div>
+        </nav>
+        <!-- /#CONTENT NAVBAR-->
+
+
+        <div class="container-fluid">
+
+            <!-- Widget: user widget style 1 -->
+            <div class="box box-widget widget-user" style="margin-top:20px;">
+                <!-- Add the bg color to the header using any of the bg-* classes -->
+                {{#account}}
+                <div class="widget-user-header bg-aqua-active">
+
+                    <h3 class="widget-user-username">
+                        <span>{{name}}</span>
+                        <div class="btn-group" style="float:right;">
+                            <button id="currentLang" type="button" class="btn btn-default btn-flat" style="background: #ecf0f5">
+                                <span class="flag-icon flag-icon-{{../currentLang}}"></span>
+                            </button>
+                            <button aria-expanded="false" type="button" class="btn btn-default btn-flat dropdown-toggle"
+                                    data-toggle="dropdown" style="background: #ecf0f5">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" style="left:auto; right:0">
+                                <li>
+                                    <a class="selectLang" role="pt" href="#">
+                                        <span class="flag-icon flag-icon-pt"></span>
+                                        <span data-i18n="subject.portuguese"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="selectLang" role="gb" href="#">
+                                        <span class="flag-icon flag-icon-gb"></span>
+                                        <span data-i18n="subject.english"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </h3>
+                    <h5 class="widget-user-desc">{{username}}</h5>
+
+
+                </div>
+                <div class="widget-user-image">
+                    <img class="img-circle" src="{{b64}}" alt="User Avatar">
+                </div>
+                <div class="box-footer">
+                    <div class="row">
+                        <div class="col-sm-4 border-right">
+                            <div class="description-block">
+                                <h5 class="description-header" data-i18n="lang.number"></h5>
+                                <span class="description-text">{{number}}</span>
+                            </div>
+                            <!-- /.description-block -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-4 border-right">
+                            <div class="description-block">
+                                <h5 class="description-header" data-i18n="lang.school"></h5>
+                                <span class="description-text">{{school}}</span>
+                            </div>
+                            <!-- /.description-block -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-4">
+                            <div class="description-block">
+                                <h5 class="description-header" data-i18n="lang.class"></h5>
+                                <span class="description-text">
+                                    {{#class}}
+                                    {{year}}º - {{name}}
+                                    {{/class}}
+                                </span>
+                            </div>
+                            <!-- /.description-block -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                {{/account}}
+
+                <div class="box-footer no-padding">
+                    <ul class="nav nav-stacked">
+                        {{#types}}
+                        <li><a class="testCounter" href="#"><span data-i18n="lang.{{type}}"></span> <span
+                                class="pull-right badge bg-blue">{{counter}}</span></a></li>
+                        {{/types}}
+                    </ul>
+                </div>
+            </div>
+            <!-- /.widget-user -->
+
+        </div>
+
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->

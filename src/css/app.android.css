@@ -1,0 +1,16 @@
+/* Android styles */
+.bar-tab {
+    bottom: 0;
+    top: auto;
+}
+
+.bar .bar-nav {
+    border-top: solid 1px #ccc;
+}
+
+.title {
+    text-align: center;
+}
+.selected{
+  background-color: #D0D0D0
+}

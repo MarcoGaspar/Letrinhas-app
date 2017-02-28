@@ -1,0 +1,126 @@
+<div style="position:static">
+
+    <span class="record{{questionNumber}}" role="false"></span>
+
+    <div class="col-md-12">
+        <div class="box" style="border-top:3px solid #3c8dbc">
+            <div class="box-header with-border">
+                <img src="images/interpretation.png" style="width:45px;">
+                <h3 class="box-title" style="padding-left:10px;">{{title}}</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <div class="row">
+                    <div style="width:100%;">
+
+                        <div class="chart">
+
+                            <div class="callout callout-success">
+                                <h4 data-i18n="lang.challenge"></h4>
+                                <p>{{question}}</p>
+                            </div>
+
+                            <div id="testArea" class="panel-body"
+                                 style="margin: 0 35px; cursor:pointer; text-align:left; font-size:23px; line-height:35px">
+
+                                <table style="width:100%;">
+                                    <tr>
+                                        {{#each content.columns}}
+                                        <td class="well" align="center" valign="top" style="width:30%">
+                                            {{#each words}}
+                                            <p id="{{@index}}" class="selectable"
+                                               style="font-weight:bold; font-size:20px; padding:5px 0;">
+                                                {{this}}
+                                            </p>
+                                            {{/each}}
+                                        </td>
+                                        {{/each}}
+                                    </tr>
+                                </table>
+                            </div>
+
+                        </div>
+                        <!-- /.chart-responsive -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- ./box-body -->
+            <div class="box-footer">
+                <div class="row">
+
+                    <!--Audio Player-->
+                    <div>
+                        <audio id="audioPlayer" role="{{questionNumber}}" style="display:none; width:100%;"
+                               autobuffer="autobuffer" controls></audio>
+                    </div>
+
+                    <!--Buttons Panel-->
+                    <div style="padding-top:10px;">
+
+                        <!--Demonstration Button-->
+                        <div class="col-md-3">
+                            <button id="demoBtn" role="{{questionNumber}}" type="button" class="btn btn-lg btn-block"
+                                    value=0
+                                    style="background-color: #ffc060">
+                                <i class="fa fa-headphones" aria-hidden="true"></i>
+                                <span data-i18n="lang.demo"></span>
+                            </button>
+                        </div>
+
+                        <!--Record Button-->
+                        <div class=" col-md-3">
+                            <button id="recordBtn" role="{{questionNumber}}" type="button" class="btn btn-lg btn-block"
+                                    style="background-color: #60f060">
+                                <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                                <span data-i18n="lang.record"></span>
+                            </button>
+                        </div>
+
+                        <!--Stop Record Button-->
+                        <div class="col-md-3" style="display:none;">
+                            <button id="stopRecordBtn" role="{{questionNumber}}" type="button"
+                                    class="btn btn-lg btn-block">
+                                <i class="fa fa-stop" aria-hidden="true"></i>
+                                <span data-i18n="lang.stop"></span>
+                            </button>
+                        </div>
+
+                        <!--Play Recording Button-->
+                        <div class=" col-md-3" style="display:none;">
+                            <button id="playMyTestBtn" role="{{questionNumber}}" type="button"
+                                    class="btn btn-lg btn-block">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                                <span data-i18n="lang.listen"></span>
+                            </button>
+                        </div>
+
+                        <!--Stop Recording Button-->
+                        <div class="col-md-3" style="display:none;">
+                            <button id="stopRecordingBtn" role="{{questionNumber}}" type="button"
+                                    class="btn btn-lg btn-block">
+                                <i class="fa fa-stop" aria-hidden="true"></i>
+                                <span data-i18n="lang.stop"></span>
+                            </button>
+                        </div>
+
+                        <!--Stop Button-->
+                        <div class="col-md-3" style="display:none;">
+                            <button id="stopBtn" role="{{questionNumber}}" type="button" class="btn btn-lg btn-block">
+                                <i class="fa fa-stop" aria-hidden="true"></i>
+                                <span data-i18n="lang.stop"></span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.box-footer -->
+        </div>
+        <!-- /.box -->
+    </div>
+
+</div>

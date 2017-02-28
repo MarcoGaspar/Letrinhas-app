@@ -1,0 +1,83 @@
+<div class="bs-callout bs-callout-success">
+    <h4 class="callout-progress-csp">
+        <i class="fa fa-sort-amount-desc" style="padding-right:10px;" aria-hidden="true"></i>
+        <span data-i18n="lang.chronology"></span>
+        <i class="fa fa-refresh refreshChronology" style="padding-right:10px; float:right; cursor:pointer"
+           aria-hidden="true"></i>
+    </h4>
+</div>
+
+<ul class="timeline marco">
+    {{#each timeline}}
+    <!-- timeline time label -->
+    <li class="time-label">
+        <span class="bg-green">
+            {{date}}
+        </span>
+    </li>
+    <!-- /.timeline-label -->
+
+    {{#each tests}}
+    <!-- timeline item -->
+    <li>
+        <i class="fa fa-file-text-o bg-blue"></i>
+
+        <div id="" class="timeline-item ">
+            <span class="time"><i class="fa fa-clock-o"></i> {{hour}}</span>
+
+            <h3 class="timeline-header">
+                <a href="#"><span data-i18n="lang.teacher"></span> {{teacher}}</a>
+            </h3>
+
+            <div class="timeline-body">
+
+                <p>{{{description}}}</p>
+
+                <ul class="table-view" style="border:none; margin-bottom:0px;">
+
+                    <li class="table-view-cell media" style="border:none">
+                        <a class="navigate-right" href="#solve/{{_id}}">
+                            <img class="media-object pull-left" src="images/{{subject}}.png"
+                                 style="width:42px;">
+
+                            <div id="{{_id}}" class="pull-right placeholder light" style="">
+                            
+                                          </div>
+                            <div class="media-body">
+                                {{title}}
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="timeline-footer">
+                <a class="btn btn-primary btn-xs deliverBtn" role="{{_id}}">
+                    <i class="fa fa-share"></i>
+                    <span data-i18n="lang.finalize"></span>
+                </a>
+                <p style="float:right; text-align:right; margin-top:-4px">
+                    <span data-i18n="lang.deliverDate" style="font-weight: 600"></span>
+                    <br>
+                    <span style="color:#9c1919;">{{endDate}}</span>
+                </p>
+            </div>
+        </div>
+    </li>
+    <!-- END timeline item -->
+    {{/each}}
+
+    {{/each}}
+
+    <li style="padding-bottom:20px;">
+        <i class="fa fa-clock-o bg-gray"></i>
+    </li>
+
+</ul>
+<script>
+
+
+
+
+
+</script>

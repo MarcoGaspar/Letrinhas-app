@@ -1,0 +1,81 @@
+{
+  "init":{
+    "welcome": "Welcome to Letrinhas",
+    "langpage":{
+      "title": "Language",
+      "description": "Choose the language you want to use in your experience with Letrinhas.",
+      "button": "Synchronize"
+    },
+    "syncpage":{
+      "title": "Syncing",
+      "description": "This operation may take a few minutes"
+    },
+    "completepage":{
+      "title": "Setup Complete!",
+      "description": "The setup of Letrinhas was completed successfully . You may now start using the app.",
+      "button": "Go to Letrinhas"
+    },
+    "failpage":{
+      "title": "Setup Error!",
+      "description": "There was an error in synchronization. Make sure you have internet connection and try again.",
+      "button": "Try Again"
+    }
+  },
+  "login": {
+    "user": "Username",
+    "password": "Password",
+    "signin": "Sign In",
+    "register": "Sync",
+    "rememberme": "Remember Me"
+  },
+  "sidebar": {
+    "header": "Menus",
+    "welcome": "Welcome,",
+    "mainmenu": "Main Navigation",
+    "appmenu": "Application",
+    "accountmenu": "My Account",
+    "dashboard": "Dashboard",
+    "statistics": "Statistics",
+    "sync": "Synchronize",
+    "profile": "My Profile",
+    "logout": "Logout"
+  },
+  "subject": {
+    "portuguese": "Portuguese",
+    "math": "Mathematics",
+    "english": "English",
+    "socialEnvironment": "Social Environment"
+  },
+  "lang": {
+    "chronology": "Work Chronology",
+    "deliverDate": "Delivery Date",
+    "finalize": "Deliver",
+    "teacher": "Teacher",
+    "genstatistics": "General Statistics",
+    "readingGraph": "Reading Graphic",
+    "subjectGraph": "Subject Graphic",
+    "fluidity": "Fluidity",
+    "accuracy": "Accuracy",
+    "points": "Points",
+    "precision": "Precision",
+    "date": "Date",
+    "subject": "Subject",
+    "note": "Note",
+    "totalappreciation": "Total Appreciation",
+    "number": "Number",
+    "school": "School",
+    "class": "Class",
+    "homework": "Homework",
+    "diagnosticTest": "Diagnostic Test",
+    "finalEvaluationTest": "Final Evaluation Test",
+    "intermediateEvaluationTest": "Intermediate Evaluation Test",
+    "intermediateEvaluationWorkSheet": "Intermediate Evaluation Work Sheet",
+    "challenge": "Challenge",
+    "back": "Go Back",
+    "finishTest": "Finish Test",
+    "demo": "Demo",
+    "record": "Record",
+    "listen": "Listen",
+    "stop": "Stop"
+  }
+}

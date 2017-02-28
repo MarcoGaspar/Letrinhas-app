@@ -1,0 +1,101 @@
+<!--NAVBAR-->
+<nav class="navbar navbar-default" style="position:fixed; width:100%; background:transparent">
+    <div class="container-fluid"  style="background:transparent;">
+        <div class="navbar-header"  style="background:transparent; margin:0 auto; text-align:center" >
+            <a class="navbar-brand" href="#"  style="background:transparent; ">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+            </a>
+            <p class="navbar-text" data-i18n="init.welcome" style="color:white; padding-left:0;"></p>
+        </div>
+    </div>
+</nav>
+<!-- /#NAVBAR-->
+
+
+<div id="firstScreen" class="Aligner grad-blue" style="width:100%; height:100%; text-align:center;">
+
+    <p class="Aligner-item" style="color: #fff; font-size:30px;">
+        <i class="fa fa-language" style="padding-right:15px;" aria-hidden="true"></i>
+        <span data-i18n="init.langpage.title"></span>
+    </p>
+
+    <div class="test" data-i18n="language"></div>
+
+    <p class="Aligner-item" style="color: #fff; font-size:20px;">
+        <span data-i18n="init.langpage.description"></span>
+    </p>
+
+    <select id="langSelect" class="Aligner-item" style="display:block">
+        <option value="pt">Português</option>
+        <option value="gb">Inglês</option>
+    </select>
+
+    <button type="button" class="btn btn-block btn-success btn-lg Aligner-item nextScreen" style="height:50px;">
+        <span data-i18n="init.langpage.button"></span>
+        <i class="fa fa-chevron-right" style="padding-left:15px;" aria-hidden="true"></i>
+    </button>
+
+</div>
+
+<div id="secondScreen" class="Aligner hide grad-blue" style="width:100%; height:100%; text-align:center; ">
+
+    <p class="Aligner-item" style="display:block; color: #fff; font-size:30px;">
+        <i class="fa fa-refresh" style="padding-right:15px;" aria-hidden="true"></i>
+        <span data-i18n="init.syncpage.title"></span>
+    </p>
+
+    <p class="Aligner-item" style="color: #fff; font-size:16px;">
+        <span data-i18n="init.syncpage.description"></span>
+    </p>
+
+    <div class="loader2" style="margin-top:15px;">
+        <div class="placeholder light">
+            <div class="spinner" style="border: 3px solid #fff; border-bottom:0"></div>
+        </div>
+    </div>
+
+    <p id="syncDBInfo" class="Aligner-item" style="color: #fff; font-size:16px; margin-top:60px;">
+        A procurar estudantes...
+    </p>
+
+</div>
+
+<div id="thirdScreen" class="Aligner hide grad-blue" style="width:100%; height:100%; text-align:center; ">
+
+    <p class="Aligner-item" style="display:block; color: #fff; font-size:30px; margin-top:-100px;">
+        <i class="fa fa-check" style="padding-right:15px;" aria-hidden="true"></i>
+        <span data-i18n="init.completepage.title"></span>
+    </p>
+
+    <p class="Aligner-item" style="color: #fff; font-size:20px;">
+        <span data-i18n="init.completepage.description"></span>
+    </p>
+
+    <a href="#login" style="width:100%;">
+        <button type="button" class="btn btn-block btn-success btn-lg Aligner-item finishInit" style="height:50px;">
+            <span data-i18n="init.completepage.button"></span>
+            <i class="fa fa-sign-in" style="padding-left:15px;" aria-hidden="true"></i>
+        </button>
+    </a>
+
+</div>
+
+<div id="fourthScreen" class="Aligner hide grad-blue" style="width:100%; height:100%; text-align:center; ">
+
+    <p class="Aligner-item" style="color: #fff; font-size:30px;">
+        <i class="fa fa-times" style="padding-right:15px;" aria-hidden="true"></i>
+        <span data-i18n="init.failpage.title"></span>
+    </p>
+
+    <div class="test" data-i18n="language"></div>
+
+    <p class="Aligner-item" style="color: #fff; font-size:20px;">
+        <span data-i18n="init.failpage.description"></span>
+    </p>
+
+    <button type="button" class="btn btn-block btn-success btn-lg Aligner-item nextScreen" style="height:50px;">
+        <i class="fa fa-chevron-left" style="padding-right:15px;" aria-hidden="true"></i>
+        <span data-i18n="init.failpage.button"></span>
+    </button>
+
+</div>

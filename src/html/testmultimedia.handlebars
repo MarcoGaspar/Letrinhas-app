@@ -1,0 +1,73 @@
+<div style="position:static">
+
+    <div class="col-md-12">
+        <div class="box" style="border-top:3px solid #3c8dbc">
+            <div class="box-header with-border">
+                <img src="images/interpretation.png" style="width:45px;">
+                <h3 class="box-title" style="padding-left:10px;">{{title}}</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <div class="row">
+                    <div style="width:100%;">
+
+                        <div class="chart">
+
+                            <div class="callout callout-success">
+                                <h4 data-i18n="lang.challenge"></h4>
+                                <p>{{question}}</p>
+                            </div>
+
+                            <div id="testArea" class="panel-body"
+                                 style="margin: 0 35px; cursor:pointer; text-align:center; font-size:23px; line-height:35px">
+
+                                {{#ifCond content.questionType 'image'}}
+                                <img src="{{content.question}}">
+                                {{/ifCond}}
+
+                                {{#ifCond content.questionType 'text'}}
+                                {{content.question}}
+                                {{/ifCond}}
+
+                            </div>
+
+                        </div>
+                        <!-- /.chart-responsive -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- ./box-body -->
+            <div class="box-footer">
+                <div class="row">
+
+                    <div id="possibleAnswers" class="btn-group btn-group-justified" role="group" aria-label="..." style="cursor: pointer;">
+
+                        {{#each content.answers}}
+
+                        <div class="col-md-3 testAnswer">
+                            <button role="{{this._id}}" type="button" class="btn btn-lg btn-block testAnswer">
+                                {{#ifCond ../content.answerType 'image'}}
+                                <img style="max-width:100%" src="{{this.content}}">
+                                {{/ifCond}}
+
+                                {{#ifCond ../content.answerType 'text'}}
+                                {{this.content}}
+                                {{/ifCond}}
+                            </button>
+                        </div>
+
+                        {{/each}}
+
+                    </div>
+
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.box-footer -->
+        </div>
+        <!-- /.box -->
+    </div>
+
+</div>

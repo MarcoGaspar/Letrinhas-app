@@ -1,0 +1,76 @@
+<div style="position:static">
+
+    <div class="col-md-12">
+        <div class="box" style="border-top:3px solid #3c8dbc">
+            <div class="box-header with-border">
+                <img src="images/interpretation.png" style="width:45px;">
+                <h3 class="box-title" style="padding-left:10px;">{{title}}</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <div class="row">
+                    <div style="width:100%;">
+
+                        <div class="chart">
+
+                            <div class="callout callout-success">
+                                <h4 data-i18n="lang.challenge"></h4>
+                                <p>{{question}}</p>
+                            </div>
+
+                            <div id="testArea" class="panel-body"
+                                 style="margin: 0 35px; cursor:pointer; text-align:left; font-size:23px; line-height:35px">
+
+                                {{{content.text}}}
+
+                            </div>
+
+                        </div>
+                        <!-- /.chart-responsive -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- ./box-body -->
+            <div class="box-footer">
+                <div class="row">
+
+                    <!--Audio Player-->
+                    <div>
+                        <audio id="audioPlayer" role="{{questionNumber}}" style="display:none; width:100%;"
+                               autobuffer="autobuffer" controls></audio>
+                    </div>
+
+                    <!--Buttons Panel-->
+                    <div style="padding-top:10px;">
+
+                        <!--Demonstration Button-->
+                        <div class="col-md-3">
+                            <button id="demoBtn" role="{{questionNumber}}" type="button" class="btn btn-lg btn-block"
+                                    value=0
+                                    style="background-color: #ffc060">
+                                <i class="fa fa-headphones" aria-hidden="true"></i>
+                                <span data-i18n="lang.demo"></span>
+                            </button>
+                        </div>
+
+                        <!--Stop Button-->
+                        <div class="col-md-3" style="display:none;">
+                            <button id="stopBtn" role="{{questionNumber}}" type="button" class="btn btn-lg btn-block">
+                                <i class="fa fa-stop" aria-hidden="true"></i>
+                                <span data-i18n="lang.stop"></span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.box-footer -->
+        </div>
+        <!-- /.box -->
+    </div>
+
+</div>

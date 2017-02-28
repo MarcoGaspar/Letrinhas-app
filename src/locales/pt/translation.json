@@ -1,0 +1,81 @@
+{
+  "init":{
+    "welcome": "Bem-Vindo ao Letrinhas",
+    "langpage":{
+      "title": "Linguagem",
+      "description": "Escolha a linguagem que pretende usar na sua experiência com o Letrinhas.",
+      "button": "Continuar"
+    },
+    "syncpage":{
+      "title": "A Sincronizar",
+      "description": "Esta operação pode demorar alguns minutos."
+    },
+    "completepage":{
+      "title": "Configuração Completa!",
+      "description": "A configuração do Letrinhas foi concluida com sucesso. Pode agora começar a usar a aplicação.",
+      "button": "Seguira para o Letrinhas"
+    },
+    "failpage":{
+      "title": "Erro na Confirguração!",
+      "description": "Houve um erro na sincronização. Certifique-se que tem conecção à internet e tente novamente.",
+      "button": "Tentar Novamente"
+    }
+  },
+  "login": {
+    "user": "Nome de Utilizador",
+    "password": "Palavra-Passe",
+    "signin": "Entrar",
+    "register": "Sinc.",
+    "rememberme": "Lembrar-me"
+  },
+  "sidebar": {
+    "header": "Menus",
+    "welcome": "Bem-Vindo,",
+    "mainmenu": "Navegação Principal",
+    "appmenu": "Aplicação",
+    "accountmenu": "A Minha Conta",
+    "dashboard": "Painel Principal",
+    "statistics": "Estatisticas",
+    "sync": "Sincronizar",
+    "profile": "Ver Perfil",
+    "logout": "Sair"
+  },
+  "subject": {
+    "portuguese": "Português",
+    "math": "Matemática",
+    "english": "Inglês",
+    "socialEnvironment": "Estudo do Meio"
+  },
+  "lang": {
+    "chronology": "Cronologia de Trabalhos",
+    "deliverDate": "Data de Entrega",
+    "finalize": "Finalizar",
+    "teacher": "Professor/a",
+    "genstatistics": "Estatisticas Gerais",
+    "readingGraph": "Gráfico de Leitura",
+    "subjectGraph": "Gráfico de Disciplinas",
+    "fluidity": "Fluidez",
+    "accuracy": "Exactidão",
+    "points": "Pontos",
+    "precision": "Precisão",
+    "date": "Data",
+    "subject": "Disciplina",
+    "note": "Nota",
+    "totalappreciation": "Apreciação Total",
+    "number": "Numero",
+    "school": "Escola",
+    "class": "Turma",
+    "homework": "Trabalho de Casa",
+    "diagnosticTest": "Teste de Diagnóstico",
+    "finalEvaluationTest": "Teste de Avaliação Final",
+    "intermediateEvaluationTest": "Teste de Avaliação Intermédio",
+    "intermediateEvaluationWorkSheet": "Ficha de Avaliação Intermédia",
+    "challenge": "Desafio",
+    "back": "Voltar",
+    "finishTest": "Finalizar Teste",
+    "demo": "Demonstração",
+    "record": "Gravar",
+    "listen": "Ouvir-me",
+    "stop": "Parar"
+  }
+}

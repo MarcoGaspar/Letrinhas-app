@@ -1,0 +1,109 @@
+<div style="position:static">
+
+    <span class="record{{questionNumber}}" role="false"></span>
+
+    <div class="col-md-12">
+        <div class="box" style="border-top:3px solid #3c8dbc">
+            <div class="box-header with-border">
+                <img src="images/interpretation.png" style="width:45px;">
+                <h3 class="box-title" style="padding-left:10px;">{{title}}</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <div class="row">
+                    <div style="width:100%;">
+
+                        <div class="chart">
+
+                            <div class="callout callout-success">
+                                <h4 data-i18n="lang.challenge"></h4>
+                                <p>{{question}}</p>
+                            </div>
+
+                            <!--POSSIBLE ANSWERS-->
+                            <div style="padding:0 50px;">
+                                <div class="layer block" style="float:left; width:100%; max-width:100%">
+                                    <div class="layer title hightlight">Palavras Baralhadas</div>
+                                    <ul id="sortableMain" class="block__list block__list_tags connectedSortable"
+                                        style="width:100%;">
+                                        {{#content.boxes}}
+                                        {{#words}}
+                                        <li>{{this}}</li>
+                                        {{/words}}
+                                        {{/content.boxes}}
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!--ANSWERS CONTAINERS-->
+                            <div style="padding:0 50px;">
+                                <div class="layer block" style="float:left; width:50%; max-width:50%">
+                                    {{#with content.boxes.[0]}}
+                                    <div id="sortableLeftTitle" class="layer title" role="{{_id}}">{{name}}</div>
+                                    {{/with}}
+                                    <ul id="sortableLeft" class="block__list block__list_tags connectedSortable">
+                                    </ul>
+                                </div>
+
+                                <div class="layer block" style="float:left; width:50%; max-width:50%">
+                                    {{#with content.boxes.[1]}}
+                                    <div id="sortableRightTitle" class="layer title" role="{{_id}}">{{name}}</div>
+                                    {{/with}}
+                                    <ul id="sortableRight" class="block__list block__list_tags connectedSortable">
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!--<div id="testArea" class="panel-body"-->
+                            <!--style="margin: 0 35px; cursor:pointer; text-align:left; font-size:23px; line-height:35px">-->
+
+                            <!--<table style="width:100%;">-->
+
+                            <!--<tr>-->
+                            <!--<td class="well" colspan="2" align="center" valign="top" style="width:30%">-->
+                            <!--<h4>Palavras Baralhadas</h4>-->
+                            <!--<ul id="sortableMain" class="connectedSortable sortable main">-->
+                            <!--{{#content.boxes}}-->
+                            <!--{{#words}}-->
+                            <!--<li class="ui-state-default">{{this}}</li>-->
+                            <!--{{/words}}-->
+                            <!--{{/content.boxes}}-->
+                            <!--</ul>-->
+                            <!--</td>-->
+
+                            <!--</tr>-->
+
+                            <!--<tr>-->
+                            <!--<td class="well" align="center" valign="top" style="width:30%">-->
+                            <!--{{#with content.boxes.[0]}}-->
+                            <!--<p>{{name}}</p>-->
+                            <!--{{/with}}-->
+                            <!--<ul id="sortableLeft" class="connectedSortable sortable">-->
+                            <!--</ul>-->
+                            <!--</td>-->
+
+                            <!--<td class="well" align="center" valign="top" style="width:30%">-->
+                            <!--{{#with content.boxes.[1]}}-->
+                            <!--<p>{{name}}</p>-->
+                            <!--{{/with}}-->
+                            <!--<ul id="sortableRight" class="connectedSortable sortable">-->
+                            <!--</ul>-->
+                            <!--</td>-->
+
+                            <!--</tr>-->
+
+                            <!--</table>-->
+                            <!--</div>-->
+
+                        </div>
+                        <!-- /.chart-responsive -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+        </div>
+        <!-- /.box -->
+    </div>
+
+</div>
